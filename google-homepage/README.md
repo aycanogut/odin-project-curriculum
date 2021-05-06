@@ -1,3 +1,3 @@
 # google-homepage
 
-A clone project I made with the Odin Project curriculum using HTML and SCSS. 
+Google homepage clone project for The Odin Projcet task assigment.
