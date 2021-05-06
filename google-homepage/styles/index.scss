@@ -90,7 +90,7 @@ nav {
       height: 32px;
       margin: 0 16px;
       border-radius: 50%;
-      box-shadow: #000000 0px 0.346274px 0px 0px;
+      box-shadow: #000000 0 0.346274px 0 0;
       &:hover {
         box-shadow: 0 0 0 4px rgba(214, 208, 208, 0.502);
       }
@@ -120,7 +120,6 @@ main {
       .form-group {
         width: 547px;
         display: flex;
-        padding: 12px;
         border: 1px solid rgba(154, 160, 166, 0.4);
         border-radius: 28px;
 
@@ -135,6 +134,7 @@ main {
         img {
           width: 20px;
           height: 20px;
+          margin: 12px;
         }
 
         input {
