@@ -1,0 +1,32 @@
+const computerPlay = () => {
+  const randomNumber = Math.floor(Math.random() * 3);
+  if (randomNumber === 0) {
+    return "paper";
+  } else if (randomNumber === 1) {
+    return "paper";
+  } else if (randomNumber === 2) {
+    return "scissors";
+  }
+}
+
+const playerSelection = prompt('choose').toLowerCase();
+const computerSelection = computerPlay();
+
+const playRound = (playerSelection, computerSelection) => {
+  if (playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'rock') {
+    console.log('paper beats rock')
+    return 'paper beats rock';
+  } else if (playerSelection === 'scissors' && computerSelection === 'paper' || computerSelection === 'paper' && playerSelection === 'scissors') {
+    console.log('scissors beats paper');
+    return 'scissors beats paper';
+  } else if (playerSelection === 'rock' && computerSelection === 'scissors' || computerSelection === 'scissors' && playerSelection === 'rock') {
+    console.log('rock beats scissors');
+    return 'rock beats scissors';
+  } else if (playerSelection === 'rock' && computerSelection === 'rock' || computerSelection === 'scissors' && playerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'paper') {
+    console.log('tie');
+    return 'tie';
+  }
+}
+
+
+playRound(playerSelection, computerSelection)
