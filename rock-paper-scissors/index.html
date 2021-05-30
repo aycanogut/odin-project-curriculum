@@ -5,11 +5,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <title>Rock || Paper || Scissors</title>
+  <!-- User CSS -->
   <link rel="stylesheet" href="style.css">
+  <!-- Nes CSS -->
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
 </head>
 
 <body>
+  <div class="nes-container is-dark with-title is-centered">
+    <h1 class="title">Rock, Paper, Scissors</h1>
+    <section class="vs">
+      <div class="card">
+        <img src="./img/you.png" alt="">
+        <a href="#" class="nes-badge is-splited">
+          <span class="is-dark">You</span>
+          <span class="is-primary">0</span>
+        </a>
+      </div>
+      <h2>vs.</h2>
+      <div class="card">
+        <img src="./img/computer.png" alt="">
+        <a href="#" class="nes-badge is-splited">
+          <span class="is-dark">AI</span>
+          <span class="is-success">0</span>
+        </a>
+      </div>
+    </section>
+    <div class="move">
+      <button type="button" class="nes-btn is-primary">Primary</button>
+      <button type="button" class="nes-btn is-success">Success</button>
+      <button type="button" class="nes-btn is-warning">Warning</button>
+      <button type="button" class="nes-btn is-error">Error</button>
+    </div>
+    <progress class="nes-progress is-pattern" value="0" max="5"></progress>
+  </div>
 
   <script type="text/javascript" src="app.js"></script>
 </body>
