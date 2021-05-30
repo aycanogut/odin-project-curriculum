@@ -1,3 +1,21 @@
+// DOM declares
+
+// badges
+const badgeYou = document.querySelector('span.is-primary');
+const badgeComputer = document.querySelector('span.is-success');
+
+// turn result
+const turnResult = document.querySelector('.turn-result');
+
+// game buttons
+const rockButton = document.querySelector('button.is-error');
+const paperButton = document.querySelector('button.is-success');
+const scissorsButton = document.querySelector('button.is-warning');
+
+// progress bar
+const progressBar = document.querySelector('progress');
+console.log(progressBar);
+
 const computerPlay = () => {
   const randomNumber = Math.floor(Math.random() * 3);
   if (randomNumber === 0) {

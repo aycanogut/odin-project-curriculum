@@ -2,16 +2,19 @@
   height: 100vh;
 }
 
+/* wrapper */
 .vs {
   display: flex;
 }
 
+/* vs  */
 h2 {
   display: flex;
   align-items: center;
   font-size: 50px;
 }
 
+/* card */
 .card {
   display: flex;
   flex-direction: column;
@@ -21,13 +24,28 @@ h2 {
   margin-bottom: 10vmax;
 }
 
+/* card image */
 img {
   width: 50%;
   margin-block: 5rem;
 
 }
 
+/* result */
+.result .message {
+  margin-right: 150px;
+}
 
+.result .nes-balloon {
+  margin: 0 0 50px 150px;
+}
+
+/* selection buttons */
+.move {
+  margin: 5vh 0;
+}
+
+/* progress bar */
 progress {
   margin: 200px;
   width: 100%;
