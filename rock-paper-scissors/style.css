@@ -1,10 +1,12 @@
 body {
   height: 100vh;
+  overflow: hidden;
 }
 
 /* wrapper of players */
 .vs {
   display: flex;
+  justify-content: center;
 }
 
 /* vs  */
@@ -26,7 +28,8 @@ h2 {
 
 /* card image */
 img {
-  width: 50%;
+  width: 27%;
+  height: auto;
   margin-block: 5rem;
 
 }
@@ -42,11 +45,5 @@ img {
 
 /* selection buttons */
 .move {
-  margin: 5vh 0;
-}
-
-/* progress bar */
-progress {
-  margin: 200px;
-  width: 100%;
+  padding: 10vh 0;
 }
