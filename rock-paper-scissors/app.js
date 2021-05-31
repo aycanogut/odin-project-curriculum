@@ -33,7 +33,6 @@ const computerPlay = () => {
   } else if (randomNumber === 2) {
     return "scissors";
   }
-  return randomNumber;
 }
 
 function disableButton() {
@@ -45,23 +44,35 @@ function disableButton() {
 
 const playRound = (playerSelection) => {
   const computerSelection = computerPlay();
-  if (computerPlay < 5 || playerScore < 5) {
-    if (playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors' || playerSelection === 'scissors' && computerSelection === 'rock') {
-      computerScore++;
-      turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! AI won this round!`;
-      badgeComputer.textContent = `${computerScore}`
-    } else if (playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper' || playerSelection === 'rock' && computerSelection === 'scissors') {
-      playerScore++;
-      turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! You won this round!`;
-      badgePlayer.textContent = `${playerScore}`;
-    } else if (playerSelection === computerSelection) {
-      turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! tie!`;
-    }
+  detectWinner();
+
+  if (playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors' || playerSelection === 'scissors' && computerSelection === 'rock') {
+    computerScore++;
+    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! AI won this round!`;
+    badgeComputer.textContent = `${computerScore}`
+  } else if (playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper' || playerSelection === 'rock' && computerSelection === 'scissors') {
+    playerScore++;
+    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! You won this round!`;
+    badgePlayer.textContent = `${playerScore}`;
+  } else if (playerSelection === computerSelection) {
+    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! tie!`;
+  }
+  console.log(`playerScore: ${playerScore}`);
+  console.log(`computerScore: ${computerScore}`);
+  detectWinner();
+}
+
+const detectWinner = () => {
+  if (computerScore === 5) {
+    alert('COMPUTER WON! GO CRY!!!')
+    turnResult.innerHTML = "YOU LOSEEEEEEEEER!"
+  } else if (playerScore === 5) {
+    alert("YOU WON!");
+    turnResult.innerHTML = "NAILED IT!"
+
   }
 }
 
-
-playRound()
 
 
 
