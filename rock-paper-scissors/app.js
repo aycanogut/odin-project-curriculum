@@ -10,9 +10,6 @@ const badgeComputer = document.querySelector('span.is-success');
 // turn result
 const turnResult = document.querySelector('.turn-result');
 
-// progress bar
-const progressBar = document.querySelector('progress');
-
 // buttons
 const buttons = document.querySelectorAll('.nes-btn');
 
@@ -52,13 +49,11 @@ const playRound = (playerSelection) => {
     badgeComputer.textContent = `${computerScore}`
   } else if (playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper' || playerSelection === 'rock' && computerSelection === 'scissors') {
     playerScore++;
-    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! You won this round!`;
+    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! you won this round!`;
     badgePlayer.textContent = `${playerScore}`;
   } else if (playerSelection === computerSelection) {
     turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! tie!`;
   }
-  console.log(`playerScore: ${playerScore}`);
-  console.log(`computerScore: ${computerScore}`);
   detectWinner();
 }
 
