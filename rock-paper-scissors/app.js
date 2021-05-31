@@ -33,6 +33,7 @@ const computerPlay = () => {
   }
 }
 
+// disable buttons after game finished
 function disableButton() {
   buttons.forEach(btn => {
     btn.disabled = true
