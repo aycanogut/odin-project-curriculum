@@ -50,13 +50,13 @@ img {
 /* restart button */
 .restart-button {
   margin: 5% 0 20% 0;
-  padding: 200px 20%;
+  padding: 30px 10px;
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 10px dashed #000;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 /* small screens  */
@@ -107,6 +107,7 @@ img {
 
   .restart-button {
     margin: 0;
+    top: 30%;
     padding: 50px 20%;
     font-size: 20px;
   }

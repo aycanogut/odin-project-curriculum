@@ -40,7 +40,6 @@ function disableButton() {
   })
 }
 
-
 const playRound = (playerSelection) => {
   const computerSelection = computerPlay();
   detectWinner();
