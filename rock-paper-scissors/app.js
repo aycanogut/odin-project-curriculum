@@ -77,5 +77,6 @@ const playAgain = () => {
   const restartButton = document.createElement('button');
   restartButton.innerHTML = 'TRY AGAIN!';
   restartButton.classList.add('restart-button');
+  restartButton.setAttribute('onclick', 'window.location.reload()');
   container.appendChild(restartButton);
 }
