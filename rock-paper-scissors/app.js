@@ -13,6 +13,11 @@ const progressBar = document.querySelector('progress');
 // buttons
 const buttons = document.querySelectorAll('.nes-btn');
 
+// score counter stuff
+let playerScore = 0;
+let computerScore = 0;
+let playCount = 0;
+
 // catch button value
 buttons.forEach(button => button.addEventListener('click', () => playRound(button.value)));
 
@@ -29,29 +34,38 @@ const computerPlay = () => {
   return randomNumber;
 }
 
+function disableButton() {
+  buttons.forEach(btn => {
+    btn.disabled = true
+  })
+}
+
 
 const playRound = (playerSelection) => {
   const computerSelection = computerPlay();
-  computerPlay();
 
-  // score counter stuff
-  let playerScore = 0;
-  let computerScore = 0;
-  let playCount = 0;
+
 
   if (playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors' || playerSelection === 'scissors' && computerSelection === 'rock') {
-    computerScore++;
-    badgeComputer.innerHTML = `${computerScore}`
-    turnResult.innerHTML = 'paper beats rock, AI won this round!';
-    playCount++;
+    playCount += 1;
+    computerScore += 1;
+    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! AI won this round! ${playCount} round played.`;
+    badgeComputer.textContent = `${computerScore}`
+    if (computerScore === 5) {
+      turnResult.innerHTML = 'AI won! go cry';
+    }
   } else if (playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper' || playerSelection === 'rock' && computerSelection === 'scissors') {
-    turnResult.innerHTML = 'paper beats rock, you won this round!';
-    playerScore++
-    badgePlayer.innerHTML = `${playerScore}`;
-    playCount++;
-  } else {
-    turnResult.innerHTML = 'tie!';
-    playCount++;
+    playCount += 1;
+    playerScore += 1;
+    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! You won this round! ${playCount} round played.`;
+    badgePlayer.textContent = `${playerScore}`;
+  } else if (playerSelection === computerSelection) {
+    playCount += 1;
+    turnResult.innerHTML = `${playerSelection} vs. ${computerSelection}! tie! ${playCount} round played.`;
+  }
+
+  if (playCounter === 5 && computerScore === 5) {
+
   }
 }
 
