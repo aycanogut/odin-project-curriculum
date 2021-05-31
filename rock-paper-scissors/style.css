@@ -93,6 +93,14 @@ img {
     font-size: 12px;
   }
 
+  .move {
+    margin: 10px 0;
+  }
+
+  .move .nes-btn {
+    margin: 5px;
+  }
+
   .move p {
     display: none;
   }
