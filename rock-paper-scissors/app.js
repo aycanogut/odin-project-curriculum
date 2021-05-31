@@ -63,10 +63,12 @@ const detectWinner = () => {
     alert('COMPUTER WON! GO CRY!!!')
     turnResult.innerHTML = "YOU LOSEEEEEEEEER!"
     playAgain();
+    disableButton()
   } else if (playerScore === 5) {
     alert("YOU WON!");
     turnResult.innerHTML = "NAILED IT!"
     playAgain();
+    disableButton()
   }
 }
 

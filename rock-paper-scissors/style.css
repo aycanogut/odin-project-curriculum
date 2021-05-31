@@ -27,7 +27,7 @@ h2 {
 
 /* card image */
 img {
-  width: 27%;
+  width: 250px;
   height: auto;
   margin-block: 5rem;
 
@@ -44,15 +44,17 @@ img {
 
 /* selection buttons */
 .move {
-  padding: 10vh 0;
+  padding: 6vh 0;
 }
 
 /* restart button */
 .restart-button {
   margin: 5% 0 20% 0;
-  padding: 50px;
+  padding: 200px 20%;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 10px dashed #000;
+  font-size: 50px;
 }
