@@ -58,3 +58,48 @@ img {
   border: 10px dashed #000;
   font-size: 50px;
 }
+
+/* small screens  */
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .vs {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    margin: 0;
+  }
+
+  img {
+    width: 100px;
+    margin: 12px 0;
+    ;
+  }
+
+  .result .message {
+    display: none;
+  }
+
+  .result .nes-balloon {
+    margin: 12px 0;
+    padding: 2px;
+    font-size: 12px;
+  }
+
+  .move p {
+    display: none;
+  }
+
+  .restart-button {
+    margin: 0;
+    padding: 50px 20%;
+    font-size: 20px;
+  }
+}
