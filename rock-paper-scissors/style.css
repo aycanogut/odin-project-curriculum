@@ -1,8 +1,8 @@
-.nes-container {
+body {
   height: 100vh;
 }
 
-/* wrapper */
+/* wrapper of players */
 .vs {
   display: flex;
 }
