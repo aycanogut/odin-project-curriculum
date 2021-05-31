@@ -3,6 +3,7 @@
 // container
 const container = document.querySelector('.nes-container');
 
+
 // player badges
 const badgePlayer = document.querySelector('span.is-primary');
 const badgeComputer = document.querySelector('span.is-success');
@@ -61,17 +62,18 @@ const detectWinner = () => {
   if (computerScore === 5) {
     alert('COMPUTER WON! GO CRY!!!')
     turnResult.innerHTML = "YOU LOSEEEEEEEEER!"
+    playAgain();
   } else if (playerScore === 5) {
     alert("YOU WON!");
     turnResult.innerHTML = "NAILED IT!"
-
+    playAgain();
   }
 }
 
-
-
-
-// // const game = (playRound) => {
-// //   const playerSelection = prompt('choose').toLowerCase();
-// //   const computerSelection = computerPlay();
-// // }
+// restart button
+const playAgain = () => {
+  const restartButton = document.createElement('button');
+  restartButton.innerHTML = 'TRY AGAIN!';
+  restartButton.classList.add('restart-button');
+  container.appendChild(restartButton);
+}

@@ -1,6 +1,5 @@
 body {
   height: 100vh;
-  overflow: hidden;
 }
 
 /* wrapper of players */
@@ -46,4 +45,14 @@ img {
 /* selection buttons */
 .move {
   padding: 10vh 0;
+}
+
+/* restart button */
+.restart-button {
+  margin: 5% 0 20% 0;
+  padding: 50px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
