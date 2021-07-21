@@ -23,15 +23,27 @@ changeBtn.classList.add('btn');
 changeBtn.innerHTML = 'Change Grid Size';
 changeBtn.addEventListener('click', () => {
   const promptValue = prompt('Enter a number between 8 and 100!');
-  if (promptValue > 8 && promptValue < 100) {
+  if (promptValue >= 8 && promptValue <= 100) {
     container.innerHTML = '';
     makeGrid(promptValue, promptValue);
     stylingItems();
   }
 });
 
+// random color creator button
+const colorBtn = document.createElement('button');
+colorBtn.classList.add('btn');
+colorBtn.innerHTML = 'Random Color';
+colorBtn.addEventListener('click', () => {
+  let gridItems = document.querySelectorAll('.grid-item');
+  gridItems.forEach(gridItems => gridItems.addEventListener('mouseover', () => {
+    const color = '#' + parseInt(Math.random() * 0xffffff).toString(16);
+    gridItems.style.backgroundColor = color;
+  }));
+});
+
 // append items to the body
-btnContainer.append(resetBtn, changeBtn);
+btnContainer.append(resetBtn, colorBtn, changeBtn);
 body.appendChild(btnContainer);
 body.appendChild(container);
 
@@ -46,14 +58,13 @@ const makeGrid = (rows, cols) => {
   };
 };
 
-
 // styling grid items fuction
 const stylingItems = () => {
   let gridItems = document.querySelectorAll('.grid-item');
 
   // add event listener to all node items
   gridItems.forEach(gridItems => gridItems.addEventListener('mouseover', () => {
-    gridItems.style.backgroundColor = '#413C94'
+    gridItems.style.backgroundColor = '#413C94';
   }));
 };
 
