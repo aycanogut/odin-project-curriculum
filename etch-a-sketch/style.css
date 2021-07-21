@@ -1,6 +1,26 @@
+/* global variables */
+:root {
+  --grid-cols: 1;
+  --grid-row: 1;
+}
+
+/* container  */
 .container {
-  max-width: 1200px;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: wheat;
+  max-width: 960px;
+  height: 60vh;
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  margin: 200px auto;
+  background-color: rgb(238, 232, 220);
+}
+
+/* grid */
+.grid-item {
+  border: 1px dotted #000;
+  transition: .2s ease-in;
+}
+
+.grid-item:hover {
+  transition: .2s ease-out;
 }
