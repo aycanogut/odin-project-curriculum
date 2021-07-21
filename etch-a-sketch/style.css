@@ -4,15 +4,22 @@
   --grid-row: 1;
 }
 
-/* container  */
+/* containers  */
 .container {
   max-width: 960px;
   height: 60vh;
   display: grid;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
-  margin: 200px auto;
-  background-color: rgb(238, 232, 220);
+  margin: 0 auto;
+  background-color: #EEE8DC;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 960px;
+  margin: 5em auto;
 }
 
 /* grid */
@@ -23,4 +30,9 @@
 
 .grid-item:hover {
   transition: .2s ease-out;
+}
+
+/* buttons */
+.btn {
+  padding: 1em;
 }
