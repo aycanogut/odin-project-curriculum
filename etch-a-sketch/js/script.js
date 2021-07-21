@@ -1,14 +1,42 @@
 //* DOM declarations
 const body = document.querySelector('body');
 
-// container
+// containers
 const container = document.createElement('div');
 container.classList.add('container');
 
-// append to the body
+const btnContainer = document.createElement('div');
+btnContainer.classList.add('btn-container');
+
+// reset button
+const resetBtn = document.createElement('button');
+resetBtn.classList.add('btn');
+resetBtn.innerHTML = 'Reset Sketch';
+resetBtn.addEventListener('click', () => {
+  let gridItems = document.querySelectorAll('.grid-item');
+  gridItems.forEach(gridItems => gridItems.style.backgroundColor = '#EEE8DC');
+});
+
+// change the grid container size button
+const changeBtn = document.createElement('button');
+changeBtn.classList.add('btn');
+changeBtn.innerHTML = 'Change Grid Size';
+changeBtn.addEventListener('click', () => {
+  const promptValue = prompt('Enter a number between 8 and 100!');
+  if (promptValue > 8 && promptValue < 100) {
+    container.innerHTML = '';
+    makeGrid(promptValue, promptValue);
+    stylingItems();
+  }
+});
+
+// append items to the body
+btnContainer.append(resetBtn, changeBtn);
+body.appendChild(btnContainer);
 body.appendChild(container);
 
-//* grid create function
+//* functions
+// grid create function
 const makeGrid = (rows, cols) => {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -18,12 +46,17 @@ const makeGrid = (rows, cols) => {
   };
 };
 
+
+// styling grid items fuction
+const stylingItems = () => {
+  let gridItems = document.querySelectorAll('.grid-item');
+
+  // add event listener to all node items
+  gridItems.forEach(gridItems => gridItems.addEventListener('mouseover', () => {
+    gridItems.style.backgroundColor = '#413C94'
+  }));
+};
+
+// invoke the default states
 makeGrid(16, 16);
-
-// styling grid items
-const gridItems = document.querySelectorAll('.grid-item');
-
-// add event listener to all node items
-gridItems.forEach(gridItems => gridItems.addEventListener('mouseover', () => {
-  gridItems.style.backgroundColor = '#000'
-}));
+stylingItems()
