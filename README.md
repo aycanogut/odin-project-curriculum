@@ -3,5 +3,5 @@ all tasks and assignments for the-odin-project cirriculum.
 
 Live preview to projects:  
 [Google Homepage](https://odin-project-curriculum.vercel.app/google-homepage/index.html#)  
-[Rock, Paper, Scissor Game](https://odin-project-curriculum.vercel.app/rock-paper-scissors/index.html)
+[Rock, Paper, Scissor Game](https://odin-project-curriculum.vercel.app/rock-paper-scissors/index.html)  
 [Etch-A-Sketch Game](https://odin-project-curriculum-l0o9kjey3-aycanogut.vercel.app/etch-a-sketch/index.html)
