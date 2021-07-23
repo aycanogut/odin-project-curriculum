@@ -18,17 +18,16 @@ resetGridBtn.addEventListener('click', () => {
 });
 
 // select color button
-const selectColorBtn = document.createElement('button');
-selectColorBtn.classList.add('btn');
-selectColorBtn.innerHTML = 'Select Color';
+const selectColorBtn = document.createElement('input');
+selectColorBtn.type = 'color';
+selectColorBtn.value = '#413C94';
+selectColorBtn.classList.add('btn', 'btn-color');
 selectColorBtn.addEventListener('click', () => {
   let gridItems = document.querySelectorAll('.grid-item');
   gridItems.forEach(gridItems => gridItems.addEventListener('mouseover', () => {
-    const color = '#413C94';
-    gridItems.style.backgroundColor = color;
+    gridItems.style.backgroundColor = selectColorBtn.value;
   }));
 });
-
 
 // change the grid container size button
 const changeGridBtn = document.createElement('button');
@@ -50,8 +49,7 @@ randomColorBtn.innerHTML = 'Random Color';
 randomColorBtn.addEventListener('click', () => {
   let gridItems = document.querySelectorAll('.grid-item');
   gridItems.forEach(gridItems => gridItems.addEventListener('mouseover', () => {
-    const color = '#' + parseInt(Math.random() * 0xffffff).toString(16);
-    gridItems.style.backgroundColor = color;
+    gridItems.style.backgroundColor = '#' + parseInt(Math.random() * 0xffffff).toString(16);
   }));
 });
 
