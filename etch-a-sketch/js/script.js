@@ -8,13 +8,17 @@ container.classList.add('container');
 const btnContainer = document.createElement('div');
 btnContainer.classList.add('btn-container');
 
-// reset grid button
-const resetGridBtn = document.createElement('button');
-resetGridBtn.classList.add('btn');
-resetGridBtn.innerHTML = 'Reset Sketch';
-resetGridBtn.addEventListener('click', () => {
-  let gridItems = document.querySelectorAll('.grid-item');
-  gridItems.forEach(gridItems => gridItems.style.backgroundColor = '#EEE8DC');
+// change the grid container size button
+const changeGridBtn = document.createElement('button');
+changeGridBtn.classList.add('btn');
+changeGridBtn.innerHTML = 'Change Grid Size';
+changeGridBtn.addEventListener('click', () => {
+  const promptValue = prompt('Enter a number between 8 and 100!');
+  if (promptValue >= 8 && promptValue <= 100) {
+    container.innerHTML = '';
+    makeGrid(promptValue, promptValue);
+    stylingItems();
+  }
 });
 
 // select color button
@@ -29,19 +33,6 @@ selectColorBtn.addEventListener('click', () => {
   }));
 });
 
-// change the grid container size button
-const changeGridBtn = document.createElement('button');
-changeGridBtn.classList.add('btn');
-changeGridBtn.innerHTML = 'Change Grid Size';
-changeGridBtn.addEventListener('click', () => {
-  const promptValue = prompt('Enter a number between 8 and 100!');
-  if (promptValue >= 8 && promptValue <= 100) {
-    container.innerHTML = '';
-    makeGrid(promptValue, promptValue);
-    stylingItems();
-  }
-});
-
 // random color creator button
 const randomColorBtn = document.createElement('button');
 randomColorBtn.classList.add('btn');
@@ -53,9 +44,29 @@ randomColorBtn.addEventListener('click', () => {
   }));
 });
 
+// eraser
+const eraserBtn = document.createElement('button');
+eraserBtn.classList.add('btn');
+eraserBtn.innerHTML = 'Eraser';
+eraserBtn.addEventListener('click', () => {
+  let gridItems = document.querySelectorAll('.grid-item');
+  gridItems.forEach(gridItems => gridItems.addEventListener('mouseover', () => {
+    gridItems.style.backgroundColor = '#EEE8DC';
+  }));
+});
+
+
+// reset sketch button
+const resetGridBtn = document.createElement('button');
+resetGridBtn.classList.add('btn');
+resetGridBtn.innerHTML = 'Reset Sketch';
+resetGridBtn.addEventListener('click', () => {
+  let gridItems = document.querySelectorAll('.grid-item');
+  gridItems.forEach(gridItems => gridItems.style.backgroundColor = '#EEE8DC');
+});
 
 // append items to the body
-btnContainer.append(changeGridBtn, selectColorBtn, randomColorBtn, resetGridBtn);
+btnContainer.append(changeGridBtn, selectColorBtn, randomColorBtn, eraserBtn, resetGridBtn);
 body.appendChild(btnContainer);
 body.appendChild(container);
 
