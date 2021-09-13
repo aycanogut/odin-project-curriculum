@@ -1,0 +1,51 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: 10rem auto;
+}
+
+.calculator {
+  border: 5px solid darkseagreen;
+  border-radius: 16px;
+  padding: 10px 20px 20px 20px;
+}
+
+.calculator__screen {
+  height: 50px;
+  margin: 12px 0;
+  background-color: lightblue;
+}
+
+.calculator__screen {
+  text-align: right;
+  padding: 12px;
+  font-size: 20px;
+}
+
+.calculator__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.calculator__buttons__item {
+  width: 60px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: bisque;
+}
