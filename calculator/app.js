@@ -64,6 +64,5 @@ const calculate = () => {
 
 calculate();
 
-// delete tusu fonksiyonalitesi --- OK ---
-// yeni numara girilince en bastaki 0'i kaldirma
-// operate fonksiyonlarini UI ile bagdastirma
+// ilk ve ikinci datayi ayrica tutup operate edebilecek bir yontem bul
+// 2 array ?
