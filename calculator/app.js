@@ -1,4 +1,4 @@
-//* mathematical functions
+//* this functions takes two values and returns the calculation ( simple math )
 const add = (a, b) => {
   return a + b;
 };
@@ -15,13 +15,26 @@ const divide = (a, b) => {
   if (b !== 0) {
     return a / b;
   } else {
-    alert(`Can't do, you simp! Divide it by another number.`);
+    alert(`Can't do that, you simp! Try another number except 0.`);
   }
 };
 
-// operate function
-const operate = (operator) => {
-  return operator;
+//* this function takes operator and operands as arguments and returns the preferred calculations own function.
+const operate = (operator, firstArgument, secondArgument) => {
+  switch (operator) {
+    case "+":
+      return add(firstArgument, secondArgument);
+      break;
+    case "-":
+      return subtract(firstArgument, secondArgument);
+      break;
+    case "*":
+      return multiply(firstArgument, secondArgument);
+      break;
+    case "/":
+      return divide(firstArgument, secondArgument);
+      break;
+  }
 };
 
 //* DOM declarations and main functionalities
@@ -38,23 +51,23 @@ const calculate = () => {
   calculator.querySelectorAll(".calculator__buttons__item").forEach((item) => {
     item.addEventListener("click", (event) => {
       // value of current number
-      let displayValue = event.target.innerHTML;
+      let displayValue = event.target.textContent;
 
       // conditional chain for 'only valid numbers'
       if (displayValue === "." || displayValue.match("^[0-9]+$")) {
         arr.push(displayValue);
-        calculatorScreen.innerHTML = arr.join("");
+        calculatorScreen.textContent = arr.join("");
         console.log(arr);
       } else if (displayValue === "del") {
         arr.pop();
-        calculatorScreen.innerHTML = arr.join("");
+        calculatorScreen.textContent = arr.join("");
         console.log(arr);
       }
 
       // clear the screen and other guys when 'click' pressed
       else if (displayValue === "clear") {
         displayValue = null;
-        calculatorScreen.innerHTML = "";
+        calculatorScreen.textContent = "";
         arr = [];
         console.log(arr);
       }
