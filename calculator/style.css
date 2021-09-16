@@ -42,23 +42,24 @@ h1 {
   height: 55px;
   overflow: hidden;
   margin: 24px 0;
-  background-color: #f2ae80;
-  text-align: right;
   padding: 4px 16px 4px 4px;
   font-size: 32px;
-  color: #e0deef;
   text-shadow: 1px 1px #8b87a3;
+  text-align: right;
+  background-color: #f2ae80;
+  color: #e0deef;
+  border: 2px dashed #8b87a3;
 }
 
 .calculator__buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .calculator__buttons__item {
-  width: 70%;
-  height: 25px;
-  margin: 5px;
   text-align: center;
   text-shadow: 1px 1px #8b87a3;
   border-radius: 20px;
