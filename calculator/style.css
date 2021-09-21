@@ -80,3 +80,14 @@ h1 {
   color: #e0deef;
   cursor: grab;
 }
+
+/* key styles */
+
+[data-type="number"] {
+  background-color: rgba(128, 128, 128, 0.699);
+}
+
+[data-key="clear"] {
+  background-color: #f9172aa8;
+  color: #fff;
+}
