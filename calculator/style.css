@@ -78,3 +78,8 @@ h1 {
   background-color: #f9172aa8;
   color: #fff;
 }
+
+[data-state="selected"] {
+  background-color: #000;
+  transition: 0.3s;
+}
