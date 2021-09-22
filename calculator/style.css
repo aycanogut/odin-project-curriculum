@@ -32,10 +32,11 @@ h1 {
 }
 
 .calculator {
-  border: 8px ridge #8b87a3;
-  border-radius: 16px;
   padding: 2rem;
+  border: 2px ridge #8b87a3;
+  border-radius: 16px;
   background-color: #e0deef;
+  box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .calculator__screen {
