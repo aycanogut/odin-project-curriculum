@@ -40,8 +40,7 @@ h1 {
 }
 
 .calculator__screen {
-  position: relative;
-  height: 85px;
+  height: 55px;
   overflow: hidden;
   margin: 24px 0;
   font-size: 32px;
@@ -50,19 +49,6 @@ h1 {
   background-color: #f2ae80;
   color: #e0deef;
   border: 2px dashed #8b87a3;
-}
-
-.calculator__screen__before {
-  position: absolute;
-  top: 4px;
-  right: 12px;
-  font-size: 1.4rem;
-}
-.calculator__screen__result {
-  position: absolute;
-  bottom: 0;
-  right: 8px;
-  font-size: 2.2rem;
 }
 
 .calculator__buttons {
