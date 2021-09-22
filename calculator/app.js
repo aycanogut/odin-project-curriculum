@@ -1,9 +1,10 @@
-//* dom elements.
+//* dom elements
 const calculator = document.querySelector(".calculator");
 const keys = calculator.querySelector(".calculator__buttons");
 const operatorKeys = calculator.querySelectorAll('[data-type="operator"]');
 const display = calculator.querySelector(".calculator__screen");
 
+//
 keys.addEventListener("click", (e) => {
   if (!event.target.closest("span")) return; // abstract buttons from the rest of the content
 
@@ -22,14 +23,14 @@ keys.addEventListener("click", (e) => {
   }
 
   if (type === "operator") {
-    operatorKeys.forEach((key) => (key.dataset.state = ""));
-    key.dataset.state = "selected";
+    operatorKeys.forEach((key) => (key.dataset.state = "")); // create an empty state
+    key.dataset.state = "selected"; // for styling selected operate buttons
 
-    calculator.dataset.firstNumber = displayValue;
-    calculator.dataset.operator = key.dataset.key;
+    calculator.dataset.firstNumber = displayValue; // display the first number on screen
+    calculator.dataset.operator = key.dataset.key; // add the operator to calculator data attr
   }
 
-  calculator.dataset.previosKeyType = type;
+  calculator.dataset.previosKeyType = type; // add the targets key type to the data attr
 });
 
 const operate = (firstArgument, operator, secondArgument) => {
