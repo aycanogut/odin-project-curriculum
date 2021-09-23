@@ -35,6 +35,7 @@ keys.addEventListener("click", (e) => {
     const operator = calculator.dataset.operator;
     const secondNumber = displayValue;
     display.textContent = operate(firstNumber, operator, secondNumber);
+    operatorKeys.forEach((item) => (item.style.backgroundColor = "#8b87a3"));
   }
 
   if (type === "clear") {
