@@ -2,6 +2,10 @@ body {
   height: 100vh;
 }
 
+.nes-container {
+  min-height: 99vh;
+}
+
 /* wrapper of players */
 .vs {
   display: flex;
@@ -30,7 +34,6 @@ img {
   width: 250px;
   height: auto;
   margin-block: 5rem;
-
 }
 
 /* result */
@@ -80,7 +83,6 @@ img {
   img {
     width: 100px;
     margin: 12px 0;
-    ;
   }
 
   .result .message {
