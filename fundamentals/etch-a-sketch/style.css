@@ -12,7 +12,7 @@
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   margin: 0 auto;
-  background-color: #EEE8DC;
+  background-color: #eee8dc;
 }
 
 .btn-container {
@@ -25,11 +25,11 @@
 /* grid */
 .grid-item {
   border: 1px dotted #000;
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .grid-item:hover {
-  transition: .2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 /* buttons */
@@ -39,4 +39,26 @@
 
 .btn-color {
   min-height: 4em;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 955px) {
+  .container {
+    margin: 2em 1em 0 1em;
+  }
+
+  .btn-container {
+    margin: 4em 0.8em 0 0.8em;
+  }
+
+  .btn {
+    margin: 0 0.4em 0.5em 0.4em;
+    padding: 0.1em;
+  }
+
+  .btn-color {
+    /* margin: 0 auto 0.5em auto; */
+    padding: 0.5em;
+  }
 }
